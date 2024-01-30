@@ -1,5 +1,6 @@
-import { Text, TextInput, View, TouchableOpacity } from "react-native";
+import { Text, TextInput, View, TouchableOpacity, StatusBar } from "react-native";
 import { styles } from "./styles";
+import { Participant } from "../../components/Participant";
 
 export default function Home() {
 
@@ -24,6 +25,18 @@ export default function Home() {
           </Text>
         </TouchableOpacity>
       </View>
+
+      <StatusBar
+        barStyle="light-content"
+        hidden={false}
+        backgroundColor="#131016"
+        translucent={false}
+        networkActivityIndicatorVisible={true}
+      />
+
+      <Participant />
+      <Participant />
+
     </View>
   )
 }
