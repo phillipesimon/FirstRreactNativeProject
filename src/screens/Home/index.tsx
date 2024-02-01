@@ -3,8 +3,11 @@ import React, { useState, useEffect } from "react";
 import { Text, TextInput, View, TouchableOpacity, FlatList, Alert } from "react-native";
 import { styles } from "./styles";
 import { Participant } from "../../components/Participant";
+import { format } from "date-fns";
 
 export default function Home() {
+  const currentDate = new Date()
+
   const [participants, setParticipants] = useState<string[]>([])
   const [participantName, setParticipantName] = useState('')
 
@@ -36,7 +39,7 @@ export default function Home() {
   return (
     <View style={styles.container} >
       <Text style={styles.eventName} >First project in React Native</Text>
-      <Text style={styles.eventDate}>Friday, February 1, 2024</Text>
+      <Text style={styles.eventDate}>{format(currentDate, 'EEEE, MMMM d, yyyy')}</Text>
 
       <View style={styles.form} >
         <TextInput
