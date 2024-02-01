@@ -35,8 +35,8 @@ export default function Home() {
 
   return (
     <View style={styles.container} >
-      <Text style={styles.eventName} >Nome do evento</Text>
-      <Text style={styles.eventDate}>Domingo, 4 de Novembro de 2024</Text>
+      <Text style={styles.eventName} >First project in React Native</Text>
+      <Text style={styles.eventDate}>Friday, February 1, 2024</Text>
 
       <View style={styles.form} >
         <TextInput
@@ -69,7 +69,7 @@ export default function Home() {
         showsVerticalScrollIndicator={false}
         ListEmptyComponent={() => (
           <Text style={styles.listEmptyText}>
-            Ninguém chegou ainda? Adicione participantes a sua lista de presença!
+            Has nobody arrived at the event yet? Add participants to your attendance list!
           </Text>
         )}
       />
@@ -85,6 +85,6 @@ export default function Home() {
         }
       </ScrollView> */}
 
-    </View>
+    </View >
   )
 }
